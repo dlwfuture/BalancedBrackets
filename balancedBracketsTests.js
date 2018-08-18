@@ -9,8 +9,7 @@ class BalancedBracketsTests{
         `)
         return passed
     }
-    
-    
+
     static Test(){
         this.Validate(1, BalancedBrackets.Validate("(){}[]"), true)
         this.Validate(2, BalancedBrackets.Validate("[{()}](){}"), true)
