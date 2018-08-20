@@ -9,7 +9,7 @@ The function is located at:
 balancedBrackets.js
 Function: Validate(string)
 
-# To use it;
+# To use it:
 * const balancedBrackets = require('./balancedBrackets')
 * balancedBrackets.Validate('([]{})')
 It returns true or false indicating if brackets are balanced.
