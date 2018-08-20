@@ -1,5 +1,7 @@
-class BalancedBracketsTests{
-    static Validate(testNumber, actual, expected) {
+const BalancedBrackets = require('./balancedBrackets')
+
+module.exports = {
+    Validate: function(testNumber, actual, expected) {
         const passed = actual === expected
         passed && console.info(`Test n.${testNumber} passed`)
         !passed && console.error(`
@@ -8,9 +10,9 @@ class BalancedBracketsTests{
         Actual: ${JSON.stringify(actual)}
         `)
         return passed
-    }
+    },
 
-    static Test(){
+    Test: function(){
         this.Validate(1, BalancedBrackets.Validate("(){}[]"), true)
         this.Validate(2, BalancedBrackets.Validate("[{()}](){}"), true)
         this.Validate(3, BalancedBrackets.Validate("[]{()"), false)

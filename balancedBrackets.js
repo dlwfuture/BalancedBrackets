@@ -1,11 +1,11 @@
-class BalancedBrackets {
-    static AllowOnlySpecificChars(str, chars) {
+module.exports = {
+    AllowOnlySpecificChars: function(str, chars) {
         return str && str.length ? str.split('')
             .filter(s => chars.indexOf(s) > -1)
             .join('') : str
-    }
+    },
 
-    static Validate(str){
+    Validate: function(str){
         const openBrackets = ['[','{','(']
         const closeBrackets = [']','}',')']
         const allBrackets = [...openBrackets,...closeBrackets]
