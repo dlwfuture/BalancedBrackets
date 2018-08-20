@@ -12,4 +12,4 @@ balancedBrackets.js
 # To use it:
 * const balancedBrackets = require('./balancedBrackets')
 * balancedBrackets.Validate('([]{})')
-It returns true or false indicating if brackets are balanced.
+* It returns true or false indicating if brackets are balanced.
