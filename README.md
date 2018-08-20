@@ -7,7 +7,7 @@ You need to run from command line:
 # Validate brackets balanced function 
 The function is located at:
 balancedBrackets.js
-Function: Validate(string)
+* Function: Validate(string)
 
 # To use it:
 * const balancedBrackets = require('./balancedBrackets')
