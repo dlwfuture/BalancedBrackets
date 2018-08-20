@@ -10,6 +10,6 @@ balancedBrackets.js
 Function: Validate(string)
 
 # To use it;
-const balancedBrackets = require('./balancedBrackets')
-balancedBrackets.Validate('([]{})')
+* const balancedBrackets = require('./balancedBrackets')
+* balancedBrackets.Validate('([]{})')
 It returns true or false indicating if brackets are balanced.
