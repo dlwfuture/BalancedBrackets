@@ -7,6 +7,7 @@ module.exports = {
         Expected: ${JSON.stringify(expected)}
         Actual: ${JSON.stringify(actual)}
         Value: ${JSON.stringify(expression)}
+        `
     },
     Validate: function(testNumber, actual, expected, expression) {
         const success = actual === expected
