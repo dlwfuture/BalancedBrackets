@@ -1,21 +1,19 @@
 const BalancedBrackets = require('./balancedBrackets')
 
 module.exports = {
+    Message: function(testNumber, actual, expected, expression, success){
+        return `
+        Test n.${testNumber} ${ success ? "successfull" : "failed" }
+        Expected: ${JSON.stringify(expected)}
+        Actual: ${JSON.stringify(actual)}
+        Value: ${JSON.stringify(expression)}
+        `
+    },
     Validate: function(testNumber, actual, expected, expression) {
-        const passed = actual === expected
-        passed && console.info(`
-        Test n.${testNumber} passed
-        Expected: ${JSON.stringify(expected)}
-        Actual: ${JSON.stringify(actual)}
-        Value: ${JSON.stringify(expression)}
-        `)
-        !passed && console.error(`
-        Test n.${testNumber} failed
-        Expected: ${JSON.stringify(expected)}
-        Actual: ${JSON.stringify(actual)}
-        Value: ${JSON.stringify(expression)}
-        `)
-        return passed
+        const success = actual === expected
+        success && console.info(this.Message(testNumber, actual, expected, expression, success))
+        !success && console.error(this.Message(testNumber, actual, expected, expression, success))
+        return success
     },
 
     Test: function(){
